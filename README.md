@@ -13,8 +13,8 @@ ELO Microservice Instructions:
   
   The first get_elo will return [username/id, new_elo] so it can be set to a variable to save the returned results.
       
-UML sequence diagram showing how requesting and receiving data work. Make it detailed enough that your partner (and your grader) will understand.
-<!-- ![plot] (C:\OSU\CS 361 Software Engineering I\VScode\361App\Design\UML.png) -->
+
+![UML Image] (Design/UML.png)
 
 
 
