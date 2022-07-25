@@ -1,7 +1,7 @@
 # 361App
 Tkinter fitness app
 
-ELO Microservice Instructions:
+<h1>ELO Microservice Instructions:</h1>
   Imports:
     from client import get_elo, DISCONNECT_MESSAGE
   A request is made from the client by calling the get_elo function. The call is made twice, first with the data and second with a disconnect message.
