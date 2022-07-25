@@ -12,7 +12,7 @@ ADDR = (SERVER, PORT)
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(ADDR)
 
-def send(msg):
+def get_elo(msg):
     print(f"Sending: {msg}")
     message = pickle.dumps(msg)
     msg_length = len(message)
@@ -26,7 +26,7 @@ def send(msg):
     print(f"Received: {result}")
     return result
 
-x = ['Frank', .5, 1000, 1200] #user, outcome, user rating, opponent rating
-
-send(x)
-send(DISCONNECT_MESSAGE)
+# Example call
+# x = ['Frank', .5, 1000, 1200] #user, outcome, user rating, opponent rating
+# y= get_elo(x)
+# get_elo(DISCONNECT_MESSAGE)
