@@ -14,7 +14,7 @@ ELO Microservice Instructions:
   The first get_elo will return [username/id, new_elo] so it can be set to a variable to save the returned results.
       
 
-![ScreenShot] (https://github.com/aolness/361App/blob/36f802e712f0324c77707ebbc4fdfefd8685d9a3/Design/UML.png)
+![UML Image] (Design/UML.png)
 
 
 
