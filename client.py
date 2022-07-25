@@ -24,6 +24,7 @@ def send(msg):
     result = pickle.loads(client.recv(1024))
     
     print(f"Received: {result}")
+    return result
 
 x = ['Frank', .5, 1000, 1200] #user, outcome, user rating, opponent rating
 
