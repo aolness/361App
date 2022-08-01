@@ -9,6 +9,10 @@ class LookupExercise:
         self.window.grid(row=0, column=0)
         self.label = Label(self.window, text="Lookup exercises.").grid(row=0, column=0)
 
+        self.lookUpList = Frame(self.window)
+        self.lookUpList.grid(row=4, column=0, columnspan=3)
+        
+
         self.moveTypeClicked = StringVar()
         self.regionClicked = StringVar()
         self.muscleClicked = StringVar()
@@ -36,8 +40,9 @@ class LookupExercise:
                 self.muscleDrop = OptionMenu(self.window, self.muscleClicked, None, *muscle, command=self.getExercises)
                 self.muscleDrop.grid(row=2, column=2)
             else:
-                self.muscleClicked.set('Legs')
-                self.muscleDrop = OptionMenu(self.window, self.muscleClicked, 'Legs', command=self.getExercises)
+                muscle = ('Legs', 'Legs')
+                self.muscleClicked.set(muscle[0])
+                self.muscleDrop = OptionMenu(self.window, self.muscleClicked, None, *muscle, command=self.getExercises)
                 self.muscleDrop.grid(row=2, column=2)
         elif self.moveTypeClicked.get() == 'Accessory':
             if self.regionClicked.get() == 'Upper':
@@ -52,7 +57,7 @@ class LookupExercise:
                 self.muscleDrop.grid(row=2, column=2)
 
     def getExercises(self, x):
-        with open('ex.json', 'r+') as file:
+        with open('361App/ex.json', 'r+') as file:
             data = json.load(file)
             file.close()
         self.data =data['Exercises'][self.moveTypeClicked.get()][self.regionClicked.get()][self.muscleClicked.get()]
@@ -60,13 +65,22 @@ class LookupExercise:
         self.lookupBtn.grid(row=3, column=2)
         
     def listEx(self):
+        # self.lookupBtn = Button(self.window, text='Reset', command=self.reset)
+        # self.lookupBtn.grid(row=3, column=2)
+        for widget in self.lookUpList.winfo_children():
+            widget.destroy()
         for x in range(len(self.data)):
             txt = self.data[x]
-            Label(self.window, text=txt).grid(row=x+3, column=1)
-            btn = Button(self.window, text="Edit", command=lambda: self.editEx(txt))
-            btn.grid(row=x+3, column=2)
-            btn2 = Button(self.window, text='Delete', command=lambda: self.deleteEx(txt))
-            btn2.grid(row=x+3, column=3)
+            Label(self.lookUpList, text=txt).grid(row=x, column=1)
+            btn = Button(self.lookUpList, text="Edit", command=lambda: self.editEx(txt))
+            btn.grid(row=x, column=2)
+            btn2 = Button(self.lookUpList, text='Delete', command=lambda: self.deleteEx(txt))
+            btn2.grid(row=x, column=3)
+
+    # def reset(self):
+    #     for widget in self.window.winfo_children():
+    #         widget.destroy()
+    #     self.create_widgets()
 
     def editEx(self, text):
         print(text)

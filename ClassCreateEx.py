@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter.ttk import *
 import json
 from tkinter import messagebox
+import os
 
 
 class CreateExercise1:
@@ -71,7 +72,7 @@ class CreateExercise1:
         if self.newEx.get() != '':
             self.popup = messagebox.askokcancel('Confirm', 'Are you sure you want to create?')
             if self.popup == 1:
-                with open('ex.json', 'r+') as file:
+                with open("361App/ex.json", 'r+') as file:
                     data = json.load(file)
                     data['Exercises'][self.moveTypeClicked.get()][self.regionClicked.get()][self.muscleClicked.get()].append(self.newEx.get())
                     file.seek(0)

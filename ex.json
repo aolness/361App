@@ -1,0 +1,136 @@
+{
+    "Exercises": {
+        "Compound": {
+            "Upper": {
+                "Chest": [
+                    "Barbell Bench Press",
+                    "Incline Bench Press",
+                    "Decline Bench Press",
+                    "Dumbbell Bench Press",
+                    "Incline Dumbbell Bench Press",
+                    "Decline Dumbbell Bench Press"
+                ],
+                "Back": [
+                    "Barbell Bent Over Row",
+                    "Dumbbell Bent Over Row",
+                    "Pull Up",
+                    "Chin Up",
+                    "Lat Pull Down"
+                ],
+                "Shoulders": [
+                    "Military Press",
+                    "Seated Military Press",
+                    "Upright Row",
+                    "Arnold Press",
+                    "Landmines"
+                ]
+            },
+            "Lower": {
+                "Legs": [
+                    "Deadlift",
+                    "Romanian Deadlift",
+                    "Sumo Deadlift",
+                    "Squat",
+                    "Front Squat",
+                    "Lunges",
+                    "Bulgarian Split Squat",
+                    "Leg Press",
+                    "Box Squat"
+                ]
+            }
+        },
+        "Accessory": {
+            "Upper": {
+                "Chest": [
+                    "Dips",
+                    "Cable Fly",
+                    "Dumbbell Fly",
+                    "Single Arm Dumbbell Press",
+                    "Pullovers",
+                    "Close Grip Bench Press"
+                ],
+                "Back": [
+                    "Seated Cable Row",
+                    "One Arm Bent Over Row",
+                    "Incline Row",
+                    "Single Arm Cable Lat Pull",
+                    "Face Pull",
+                    "Shrugs",
+                    "Reverse Fly",
+                    "Back Extension"
+                ],
+                "Shoulders": [
+                    "Front Dumbbell Raise",
+                    "Lateral Dumbbell Raise",
+                    "Rear Dumbbell Raise",
+                    "Lying Rear Delt Raise"
+                ],
+                "Biceps": [
+                    "Barbell Curl",
+                    "Drag Curl",
+                    "Hammer Curl",
+                    "Incline Curl"
+                ],
+                "Triceps": [
+                    "Skull Crusher",
+                    "Bent-over Triceps Extension",
+                    "Triceps Dips",
+                    "Cable Pushdown"
+                ]
+            },
+            "Lower": {
+                "Legs": [
+                    "Hip Thrusts",
+                    "Single Leg Stiff-leg Deadlift",
+                    "Side Lunge",
+                    "Walking Lunge",
+                    "Rack Pulls",
+                    "Glute Kickback",
+                    "Rear Lunge",
+                    "Cable Hip Extensions",
+                    "Good Mornings"
+                ],
+                "Calves": [
+                    "Dumbbell Calf Raise",
+                    "Seated Calf Raise",
+                    "Smith Machine Calf Raise"
+                ]
+            }
+        }
+    },
+    "Exercise Log": {
+        "2022": {
+            "January": {},
+            "February": {},
+            "July": {
+                "2022, 7, 1": [
+                    2022,
+                    7,
+                    1
+                ],
+                "2022, 7, 11": [
+                    2022,
+                    7,
+                    11
+                ],
+                "2022, 7, 21": [
+                    2022,
+                    7,
+                    21
+                ],
+                "2022, 7, 26": [
+                    2022,
+                    7,
+                    26
+                ]
+            }
+        },
+        "2021": {}
+    },
+    "Routines": {
+        "PPL": [],
+        "ULUL": [],
+        "PPLPPL": [],
+        "5x5": []
+    }
+}
