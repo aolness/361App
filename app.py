@@ -4,8 +4,8 @@ from PIL import Image, ImageTk
 from tkcalendar import Calendar
 import datetime
 
-from ClassLookupEx import LookupExercise
-from ClassCreateEx import CreateExercise
+from LookupExercise import LookupExercise
+from CreateExercise import CreateExercise
 from CreateRoutine import CreateRoutine
 
 root = Tk()
