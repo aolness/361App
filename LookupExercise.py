@@ -2,14 +2,14 @@ from tkinter import *
 from tkinter.ttk import *
 import json
 from tkinter import messagebox
-from editExercise import EditExercise
+
 
 path = "C:/OSU/CS 361 Software Engineering I/VScode/361App/ex.json"
 
 class LookupExercise:
     def __init__(self, frame):
         self.window = frame
-        self.label = Label(self.window, text="Lookup exercises.").grid(row=0, column=0)
+        self.label = Label(self.window, text="Lookup An Exercise!.").grid(row=0, column=0)
         self.lookUpList = Frame(self.window, borderwidth=3)
         self.lookUpList.grid(row=4, column=0, columnspan=3)
         
