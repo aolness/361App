@@ -128,9 +128,29 @@
         "2021": {}
     },
     "Routines": {
-        "PPL": [],
-        "ULUL": [],
-        "PPLPPL": [],
-        "5x5": []
+        "PPL": {
+            "Days": 3,
+            "Main": 3,
+            "Accessory": 3,
+            "Level": "Intermediate"
+        },
+        "ULUL": {
+            "Days": 4,
+            "Main": 4,
+            "Accessory": 2,
+            "Level": "Intermediate"
+        },
+        "PPLPPL": {
+            "Days": 6,
+            "Main": 3,
+            "Accessory": 3,
+            "Level": "Advanced"
+        },
+        "5x5": {
+            "Days": 3,
+            "Main": 3,
+            "Accessory": 2,
+            "Level": "Beginner"
+        }
     }
 }

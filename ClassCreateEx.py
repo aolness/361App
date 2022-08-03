@@ -2,14 +2,15 @@ from tkinter import *
 from tkinter.ttk import *
 import json
 from tkinter import messagebox
-import os
+
+path = "C:/OSU/CS 361 Software Engineering I/VScode/361App/ex.json"
 
 
-class CreateExercise1:
+class CreateExercise:
     
     def __init__(self, frame):
-
-        self.window = Frame(frame)
+        self.window = frame
+        # self.window = Frame(frame, borderwidth=2)
         self.window.grid(row=0, column=0)
         self.label = Label(self.window, text="Create an exercise!").grid(row=0, column=0)
         
@@ -17,7 +18,7 @@ class CreateExercise1:
         self.regionClicked = StringVar()
         self.muscleClicked = StringVar()
         
-        self.confirmLabel = Label(None, text=None)
+        self.confirmLabel = Label(self.window, text=None)
         self.confirmLabel.grid(row=5, column=1)
         self.newEx = None
 
@@ -72,7 +73,7 @@ class CreateExercise1:
         if self.newEx.get() != '':
             self.popup = messagebox.askokcancel('Confirm', 'Are you sure you want to create?')
             if self.popup == 1:
-                with open("361App/ex.json", 'r+') as file:
+                with open(path, 'r+') as file:
                     data = json.load(file)
                     data['Exercises'][self.moveTypeClicked.get()][self.regionClicked.get()][self.muscleClicked.get()].append(self.newEx.get())
                     file.seek(0)
@@ -85,6 +86,6 @@ class CreateExercise1:
             self.newEx.select_clear()
         else:
             l = Label(self.window, text="Please enter a name.")
-            l.grid(row=5, column=1)
+            l.grid(row=6, column=1)
 
   

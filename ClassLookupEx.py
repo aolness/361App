@@ -2,14 +2,15 @@ from tkinter import *
 from tkinter.ttk import *
 import json
 from tkinter import messagebox
+from editExercise import EditExercise
+
+path = "C:/OSU/CS 361 Software Engineering I/VScode/361App/ex.json"
 
 class LookupExercise:
     def __init__(self, frame):
-        self.window = Frame(frame)
-        self.window.grid(row=0, column=0)
+        self.window = frame
         self.label = Label(self.window, text="Lookup exercises.").grid(row=0, column=0)
-
-        self.lookUpList = Frame(self.window)
+        self.lookUpList = Frame(self.window, borderwidth=3)
         self.lookUpList.grid(row=4, column=0, columnspan=3)
         
 
@@ -57,7 +58,9 @@ class LookupExercise:
                 self.muscleDrop.grid(row=2, column=2)
 
     def getExercises(self, x):
-        with open('361App/ex.json', 'r+') as file:
+        for widget in self.lookUpList.winfo_children():
+            widget.destroy()
+        with open(path, 'r+') as file:
             data = json.load(file)
             file.close()
         self.data =data['Exercises'][self.moveTypeClicked.get()][self.regionClicked.get()][self.muscleClicked.get()]
@@ -65,28 +68,30 @@ class LookupExercise:
         self.lookupBtn.grid(row=3, column=2)
         
     def listEx(self):
-        # self.lookupBtn = Button(self.window, text='Reset', command=self.reset)
-        # self.lookupBtn.grid(row=3, column=2)
-        for widget in self.lookUpList.winfo_children():
-            widget.destroy()
-        for x in range(len(self.data)):
-            txt = self.data[x]
-            Label(self.lookUpList, text=txt).grid(row=x, column=1)
-            btn = Button(self.lookUpList, text="Edit", command=lambda: self.editEx(txt))
-            btn.grid(row=x, column=2)
-            btn2 = Button(self.lookUpList, text='Delete', command=lambda: self.deleteEx(txt))
-            btn2.grid(row=x, column=3)
+        
+        for i in range(len(self.data)):
+            txt = self.data[i]
+            Label(self.lookUpList, text=txt).grid(row=i, column=1)
+            temp = [self.moveTypeClicked.get(), self.regionClicked.get(), self.muscleClicked.get(), self.data]
+            btn2 = Button(self.lookUpList, text='Delete', command=lambda x=i: self.deleteEx(temp, x+1))
+            btn2.grid(row=i, column=3)
 
-    # def reset(self):
-    #     for widget in self.window.winfo_children():
-    #         widget.destroy()
-    #     self.create_widgets()
+    def deleteEx(self, text, x):
+        popup = messagebox.askokcancel('Confirm', f'Are you sure you want to delete {text[3][x-1]}')
+        if popup == 1:
+            with open(path, 'r+') as file:
+                data = json.load(file)
+                data['Exercises'][text[0]][text[1]][text[2]].remove(text[3][x-1])
+                file.seek(0)
+                json.dump(data, file, indent=4)
+                file.truncate()
+                file.close()
+            self.data=data['Exercises'][self.moveTypeClicked.get()][self.regionClicked.get()][self.muscleClicked.get()]
+            self.getExercises(x)
+            
 
-    def editEx(self, text):
-        print(text)
 
-    def deleteEx(self, text):
-        print(text)
+    
 
 
        
