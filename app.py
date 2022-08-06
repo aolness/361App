@@ -1,8 +1,7 @@
 from tkinter import *
 from tkinter.ttk import *
-from PIL import Image, ImageTk
 from tkcalendar import Calendar
-import datetime
+
 
 from LookupExercise import LookupExercise
 from CreateExercise import CreateExercise

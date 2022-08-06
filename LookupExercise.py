@@ -10,7 +10,7 @@ path = "C:/OSU/CS 361 Software Engineering I/VScode/361App/ex.json"
 class LookupExercise:
     def __init__(self, frame):
         self.window = frame
-        self.label = Label(self.window, text="Lookup An Exercise!.").grid(row=0, column=0)
+        self.label = Label(self.window, text="Lookup An Exercise!").grid(row=0, column=0)
 
 
         

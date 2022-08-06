@@ -152,28 +152,10 @@
             "Accessory": 2,
             "Level": "Beginner"
         },
-        "TEST1": {
-            "Days": 3,
-            "Main": 1,
-            "Accessory": 0,
-            "Level": "Beginner"
-        },
-        "TEST2": {
-            "Days": 3,
-            "Main": 1,
-            "Accessory": 0,
-            "Level": "Beginner"
-        },
-        "TEST3": {
-            "Days": 3,
-            "Main": 1,
-            "Accessory": 0,
-            "Level": "Beginner"
-        },
         "TEST": {
             "Days": 3,
             "Main": 1,
-            "Accessory": 0,
+            "Accessory": 1,
             "Level": "Beginner"
         }
     }
