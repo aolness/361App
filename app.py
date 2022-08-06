@@ -7,7 +7,7 @@ import datetime
 from LookupExercise import LookupExercise
 from CreateExercise import CreateExercise
 from CreateRoutine import CreateRoutine
-from UpdateRoutine import UpdateRoutine
+from LookupRoutine import LookupRoutine
 
 root = Tk()
 root.title("Fittin dis pizza")
@@ -43,10 +43,11 @@ def createRoutine():
 
 def updateRoutine():
     destroy()
+    editRout = Frame(mainFrame)
     editRout = Frame(mainFrame, height=600, width=800, relief=SUNKEN, borderwidth=5)
     editRout.grid_propagate(0)
     editRout.grid(row=0, column=0)
-    UpdateRoutine(editRout)
+    LookupRoutine(editRout)
     
 def homeFn():
     destroy()

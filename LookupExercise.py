@@ -3,6 +3,7 @@ from tkinter.ttk import *
 import json
 from tkinter import messagebox
 
+from Scroll import ScrollableFrame
 
 path = "C:/OSU/CS 361 Software Engineering I/VScode/361App/ex.json"
 
@@ -10,6 +11,9 @@ class LookupExercise:
     def __init__(self, frame):
         self.window = frame
         self.label = Label(self.window, text="Lookup An Exercise!.").grid(row=0, column=0)
+
+
+        
         self.lookUpList = Frame(self.window, borderwidth=3)
         self.lookUpList.grid(row=4, column=0, columnspan=3)
         
@@ -68,13 +72,16 @@ class LookupExercise:
         self.lookupBtn.grid(row=3, column=2)
         
     def listEx(self):
-        
+        scroll = ScrollableFrame(self.lookUpList)
+
         for i in range(len(self.data)):
             txt = self.data[i]
-            Label(self.lookUpList, text=txt).grid(row=i, column=1)
+            Label(scroll.scrollable_frame, text=txt).grid(row=i, column=1)
             temp = [self.moveTypeClicked.get(), self.regionClicked.get(), self.muscleClicked.get(), self.data]
-            btn2 = Button(self.lookUpList, text='Delete', command=lambda x=i: self.deleteEx(temp, x+1))
+            btn2 = Button(scroll.scrollable_frame, text='Delete', command=lambda x=i: self.deleteEx(temp, x+1))
             btn2.grid(row=i, column=3)
+
+        scroll.pack()
 
     def deleteEx(self, text, x):
         popup = messagebox.askokcancel('Confirm', f'Are you sure you want to delete {text[3][x-1]}')
