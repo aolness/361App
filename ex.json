@@ -15,7 +15,8 @@
                     "Dumbbell Bent Over Row",
                     "Pull Up",
                     "Chin Up",
-                    "Lat Pull Down"
+                    "Lat Pull Down",
+                    "tset"
                 ],
                 "Shoulders": [
                     "Military Press",
@@ -98,27 +99,35 @@
             }
         }
     },
-    "Exercise Log": {
+    "ExerciseLog": {
         "2022": {
-            "January": {},
-            "February": {},
-            "July": {
-                "2022, 7, 1": [
-                    2022,
-                    7,
-                    1
-                ],
-                "2022, 7, 11": [
+            "1": {},
+            "2": {},
+            "7": {
+                "1": {
+                    "Routine": "PPL",
+                    "Main": {
+                        "1": "Bench",
+                        "2": "Shoulder",
+                        "3": "Incline"
+                    },
+                    "Accessory": {
+                        "1": "Curl",
+                        "2": "Triceps",
+                        "3": "Dips"
+                    }
+                },
+                "11": [
                     2022,
                     7,
                     11
                 ],
-                "2022, 7, 21": [
+                "21": [
                     2022,
                     7,
                     21
                 ],
-                "2022, 7, 26": [
+                "26": [
                     2022,
                     7,
                     26
