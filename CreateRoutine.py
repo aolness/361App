@@ -32,6 +32,7 @@ class CreateRoutine:
         self.daysDrop = OptionMenu(self.window, self.daysClicked, None, *days, command=self.mainFn)
         self.daysDrop.grid(row=2, column=1)
 
+    #selector for number of main lifts
     def mainFn(self, x):
         mainLabel = Label(self.window, text="# of Main Lifts:")
         mainLabel.grid(row=3, column=0)
@@ -40,6 +41,7 @@ class CreateRoutine:
         self.mainDrop = OptionMenu(self.window, self.mainClicked, None, *mainLift, command=self.accessoryFn)
         self.mainDrop.grid(row=3, column=1)
 
+    #selector for number of accessory lifts
     def accessoryFn(self, x):
         accessoryLabel = Label(self.window, text="# of Accessory Lifts")
         accessoryLabel.grid(row=4, column=0)
@@ -48,6 +50,7 @@ class CreateRoutine:
         self.accessoryDrop = OptionMenu(self.window, self.accessoryClicked, None, *accessoryLift, command=self.levelFn)
         self.accessoryDrop.grid(row=4, column=1)
 
+    #selector for experience level
     def levelFn(self, x):
         levelLabel = Label(self.window, text="Experience Level")
         levelLabel.grid(row=5, column=0)

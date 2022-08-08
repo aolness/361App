@@ -10,8 +10,6 @@ class CreateExercise:
     
     def __init__(self, frame):
         self.window = frame
-        # self.window = Frame(frame, borderwidth=2)
-        self.window.grid(row=0, column=0)
         self.label = Label(self.window, text="Create an exercise!").grid(row=0, column=0)
         
         self.moveTypeClicked = StringVar()
@@ -31,12 +29,14 @@ class CreateExercise:
         self.moveDrop = OptionMenu(self.window, self.moveTypeClicked, None, *moveType, command=self.regionFn)
         self.moveDrop.grid(row=2, column=0)
 
+    #create reagion drop down menu
     def regionFn(self, x):
         region = ('Upper', 'Lower')
         self.regionClicked.set(region[0])
         self.regionDrop = OptionMenu(self.window, self.regionClicked, None, *region, command=self.muscleFn)
         self.regionDrop.grid(row=2, column=1)
 
+    #create muscle drop down menu
     def muscleFn(self, x):
         if self.moveTypeClicked.get() == 'Compound':
             if self.regionClicked.get() == 'Upper':

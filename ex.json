@@ -101,7 +101,21 @@
     },
     "ExerciseLog": {
         "2022": {
-            "1": {},
+            "1": {
+                "4": {
+                    "Routine": "PPL",
+                    "Main": {
+                        "0": "Incline Bench Press",
+                        "1": "Decline Bench Press",
+                        "2": "Decline Dumbbell Bench Press"
+                    },
+                    "Accessory": {
+                        "0": "Single Arm Cable Lat Pull",
+                        "1": "Single Arm Cable Lat Pull",
+                        "2": "Shrugs"
+                    }
+                }
+            },
             "2": {},
             "7": {
                 "1": {
@@ -116,22 +130,59 @@
                         "2": "Triceps",
                         "3": "Dips"
                     }
+                }
+            },
+            "3": {
+                "17": {
+                    "Routine": "TEST",
+                    "Main": {
+                        "0": "Incline Bench Press"
+                    },
+                    "Accessory": {
+                        "0": "Pullovers"
+                    }
+                }
+            },
+            "8": {
+                "10": {
+                    "Routine": "PPL",
+                    "Main": {
+                        "0": "Dumbbell Bench Press",
+                        "1": "Lunges",
+                        "2": "Box Squat"
+                    },
+                    "Accessory": {
+                        "0": "Drag Curl",
+                        "1": "Hammer Curl",
+                        "2": "Hip Thrusts"
+                    }
                 },
-                "11": [
-                    2022,
-                    7,
-                    11
-                ],
-                "21": [
-                    2022,
-                    7,
-                    21
-                ],
-                "26": [
-                    2022,
-                    7,
-                    26
-                ]
+                "8": {
+                    "Routine": "PPL",
+                    "Main": {
+                        "0": "Bulgarian Split Squat",
+                        "1": "Incline Dumbbell Bench Press",
+                        "2": "Dumbbell Bent Over Row"
+                    },
+                    "Accessory": {
+                        "0": "Single Leg Stiff-leg Deadlift",
+                        "1": "Dumbbell Calf Raise",
+                        "2": "Dumbbell Calf Raise"
+                    }
+                },
+                "19": {
+                    "Routine": "PPL",
+                    "Main": {
+                        "0": "Military Press",
+                        "1": "Decline Bench Press",
+                        "2": "Incline Bench Press"
+                    },
+                    "Accessory": {
+                        "0": "Seated Calf Raise",
+                        "1": "Hip Thrusts",
+                        "2": "Rear Lunge"
+                    }
+                }
             }
         },
         "2021": {}

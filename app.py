@@ -8,12 +8,15 @@ from CreateExercise import CreateExercise
 from CreateRoutine import CreateRoutine
 from LookupRoutine import LookupRoutine
 from Calendar import BuildCalendar
+from Home import HomePage
+
 
 root = Tk()
-root.title("Fittin dis pizza")
+root.title("TK Fitness")
 root.geometry("800x600")
 
-mainFrame = Frame(root)
+mainFrame = Frame(root, height=800, width=800)
+mainFrame.grid_propagate(0)
 mainFrame.grid()
 
 def destroy():
@@ -50,6 +53,10 @@ def updateRoutine():
     
 def homeFn():
     destroy()
+    home = Frame(mainFrame,height=600, width=800, relief=SUNKEN, borderwidth=5)
+    home.grid_propagate(0)
+    home.grid(row=0, column=0)
+    HomePage(home)
 
 def createCalendar():
     destroy()
@@ -57,11 +64,6 @@ def createCalendar():
     cal.grid_propagate(0)
     cal.grid(row=0, column=0)
     BuildCalendar(cal)
-
-
-def faq():
-    destroy()
-
 
 menubar = Menu(root)
 home = Menu(menubar, tearoff=0)
@@ -82,10 +84,6 @@ calendar = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="Calendar", menu=calendar)
 calendar.add_command(label="View Calendar", command=createCalendar)
 
-help = Menu(menubar, tearoff=0)
-menubar.add_cascade(label="Help", menu=help)
-help.add_command(label="Get Help", command=faq)
-
-
+homeFn()
 root.config(menu=menubar)
 root.mainloop()

@@ -14,11 +14,12 @@ class LookupRoutine:
         self.window = frame
         self.label = Label(self.window, text="Update A Routine!").grid(row=0, column=0)
 
-        self.lookupList = Frame(self.window)
+        self.lookupList = Frame(self.window, width=300, height=400, borderwidth=3)
+        self.lookupList.grid_propagate(0)
         self.lookupList.grid(row=1, column=0)
 
         self.updateList = Frame(self.window, width=300, height=400, borderwidth=3)
-        self.updateList.propagate(0)
+        self.updateList.grid_propagate(0)
         self.updateList.grid(row=1, column=3)
 
         self.routines = None
